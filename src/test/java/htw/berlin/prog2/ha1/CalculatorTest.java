@@ -105,6 +105,16 @@ void testClearKeepsOperation() {
 
     assertEquals("7", calc.readScreen());
 }
+@Test
+@DisplayName("should do nothing when equals is pressed without operation")
+void testEqualsWithoutOperation() {
+    Calculator calc = new Calculator();
+
+    calc.pressDigitKey(8);
+    calc.pressEqualsKey();
+
+    assertEquals("8", calc.readScreen());
+}
 
 }
 
